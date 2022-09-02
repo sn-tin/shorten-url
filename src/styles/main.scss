@@ -1,0 +1,36 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import './variables';
+@import './navbar';
+@import './main-content';
+@import './url-form';
+@import './features';
+@import './cta';
+@import './footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-fam;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $bold;
+} 
+
+p {
+  font-size: 1rem;
+  color: #00000070;
+}
+
+body {
+  font-size: 18px;
+  height: 100vh;
+}
+
+// @media screen and (min-width: 768px) {
+//   // nav, section, footer {
+//   //   padding: 50px 200px;
+//   // }
+// }

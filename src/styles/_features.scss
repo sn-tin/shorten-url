@@ -1,0 +1,120 @@
+#features {
+    background-color: $light-grayish-violet;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features-title {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+}
+.features-subtext {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin: 20px auto;
+    line-height: 2;
+}
+
+.features-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+    gap: 50px;
+}
+
+.card {
+    padding: 20px;
+    margin-top: 35px;
+    position: relative;
+    &:not(:last-of-type)::after {
+        content: '';
+        width: 10px;
+        height: 50px;
+        background-color: $cyan;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3.15rem;
+        margin: 0 auto;
+    }
+}
+
+.card-body {
+    padding: 40px 15px 30px;
+    position: relative;
+}
+
+.feature-icon {
+    width: 80px;
+    border-radius: 100vmax;
+    background-color: $dark-violet;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -4rem;
+}
+
+.icon {
+    width: 80px;
+    padding: 20px;
+}
+
+.card-title {
+    margin: 15px 0;
+}
+.card-text {
+    font-size: clamp(0.9rem, 2.5vw, 1.12rem);
+}
+
+@media screen and (min-width: 768px) {
+    #features {
+        padding: 100px 50px;
+    }
+    .features-text {
+        margin: 0 auto;
+    }
+    .features-subtext {
+        width: 70%;
+    }
+    .feature-icon {
+        right: auto;
+    }
+    .features-cards {
+        flex-direction: row;
+    }
+    .card {
+        text-align: left;
+        &:not(:last-of-type)::after {
+            content: '';
+            width: 50px;
+            height: 10px;
+            position: absolute;
+            left: auto;
+            right: -3.2rem;
+            bottom: 50%;
+            margin: 0 auto;
+        }
+        &:nth-child(2){
+            transform: translateY(50px);
+            margin-bottom: 30px;
+        }
+        &:nth-child(3){
+            transform: translateY(100px);
+            margin-bottom: 60px;
+        }
+    }
+
+    .card-title {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    #features {
+        padding: 80px 350px;
+    }
+    .features-subtext {
+        width: 43%;
+    }
+}

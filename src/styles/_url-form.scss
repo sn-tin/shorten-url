@@ -1,0 +1,165 @@
+*:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#url-form {
+    background-color: $light-grayish-violet;
+    padding: 50px 0 0;
+    margin: 100px 0 0;
+    position: relative;
+    form {
+        background-color: $dark-violet;
+        border-radius: 10px;
+        background-image: url("../assets/bg-shorten-mobile.svg");
+        background-size: contain;
+        background-position: 5rem -1.5rem;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -78px;
+        left: 0;
+        right: 0;
+        padding: 25px 20px;
+        margin: 0 20px;
+        input:not(:last-of-type){
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.url-input {
+    @include input(#FFFFFF, 100%);
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.shorten-btn {
+    @include buttons($cyan, 100%);
+    padding: 15px 30px !important;
+    border-radius: 5px;
+}
+
+.result-content {
+    margin: 50px 20px 0;
+}
+
+.result-url {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px 0;
+}
+
+.links {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    padding: 0 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.original-link {
+    border-bottom: 1px solid #c2c2c270;
+    padding-bottom: 10px;
+}
+
+.copy-url {
+    padding: 0 20px;
+}
+
+.shorten-link {
+    width: 100%;
+    @include input(#FFFFFF, 100%);
+    color: $cyan;
+    padding: 10px 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.copy-button {
+    @include buttons($cyan, 100%);
+    padding: 8px;
+    border-radius: 5px;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+@media screen and (min-width: 768px) {
+    #url-form {
+        form {
+            background-image: url("../assets/bg-shorten-desktop.svg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+            margin: 0 50px;
+            input:not(:last-of-type){
+                margin-bottom: 0;
+            }
+        }
+    }
+    .copy-url {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .copy-button {
+        width: 200px;
+    }
+    .shorten-link {
+        padding: 0;
+    }
+    .result-content {
+        padding: 0;
+        margin: 50px 50px 0;
+    }
+    .url-input, .shorten-btn {
+        padding: 15px;
+    }
+    .shorten-btn {
+        width: initial;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    #url-form {
+        form {
+            margin: 0 350px;
+        }
+    }
+    .result-content {
+        margin: 50px 350px 0;
+    }
+    .result-url {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .copy-url {
+        justify-content: flex-end;
+        padding: 0 20px;
+        margin-top: 0;
+    }
+    .original-link {
+        border: none;
+        padding-bottom: 0;
+    }
+    .shorten-link {
+        text-align: right;
+        margin-right: 2rem;
+    }
+    .url-input, .shorten-btn {
+        padding: 15px;
+    }
+    .shorten-btn {
+        width: initial;
+    }
+    .copy-button {
+        width: 60%;
+        padding: 10px 20px;
+    }
+}

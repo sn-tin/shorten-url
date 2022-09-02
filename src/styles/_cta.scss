@@ -1,0 +1,29 @@
+#call-to-action {
+    background-color: $dark-violet;
+    background-image: url("../assets/bg-boost-mobile.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.cta-title {
+    color: #FFFFFF;
+    width: 100%;
+    font-size: clamp(1.6rem, 2.5vw, 3rem);
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    @include buttons($cyan, 210px);
+}
+
+@media screen and (min-width: 768px) {
+    #call-to-action {
+        background-image: url("../assets/bg-boost-desktop.svg");
+        background-size: cover;
+        background-position: center;
+        padding: 80px 20px;
+    }
+}

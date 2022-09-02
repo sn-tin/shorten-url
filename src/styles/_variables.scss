@@ -1,0 +1,44 @@
+$font-fam: 'Poppins', sans-serif;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+/* Primary Color */
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+/* Secondary */
+$red: hsl(0, 87%, 67%);
+/* Neutral */
+$gray: hsl(0, 0%, 75%);
+$light-grayish-violet: hsla(253, 24%, 89%, 0.644);
+$grayish-violet: hsl(256, 11%, 80%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$very-dark-violet: hsl(260, 8%, 14%);
+
+@mixin buttons($color, $width){
+    color: #FFFFFF;
+    font-weight: $bold;
+    width: $width;
+    padding: 10px;
+    border: none;
+    background-color: $color;
+    &:hover {
+        background-color:hsl(180, 76%, 55%);
+    }
+}
+
+@mixin input($color, $width){
+    color: #000000;
+    font-weight: $regular;
+    width: $width;
+    padding: 10px;
+    border: none;
+    background-color: $color;
+    :focus {
+        order: none;
+    }
+}
+
+// Add class name when navbar menu is clicked
+.active {
+    display: block !important;
+}
