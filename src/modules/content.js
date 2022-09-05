@@ -83,13 +83,19 @@ const DOMcontent = () => {
         urlFormContent.className = 'url-form-content';
         const formInput = d.createElement('form');
         formInput.innerHTML = `
-            <input type="text" class="url-input" placeholder="Shorten a link here..." required>
+            <div class="form-url-input">
+                <input type="text" class="url-input" placeholder="Shorten a link here..." required>
+                <p class="error"></p>
+            </div>
             <input type="submit" class="shorten-btn" value="Shorten It!">
         `;
+        const resultContainer = d.createElement('div');
+        resultContainer.className = 'result-content';
 
         body.appendChild(urlForm);
         urlForm.appendChild(urlFormContent);
         urlFormContent.appendChild(formInput);
+        urlFormContent.appendChild(resultContainer);
     })()
 
     const featuresSection = (() => {

@@ -85,6 +85,7 @@
     }
     .card {
         text-align: left;
+        width: 25rem;
         &:not(:last-of-type)::after {
             content: '';
             width: 50px;

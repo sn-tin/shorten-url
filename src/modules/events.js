@@ -18,7 +18,7 @@ const Events = () => {
             shortenURL(urlInput.value);
         }
         if(target.matches('.copy-button')){
-            const shortenLink = d.querySelector('.shorten-link');
+            const shortenLink = target.previousElementSibling;
             shortenLink.select();
             shortenLink.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(shortenLink.value);

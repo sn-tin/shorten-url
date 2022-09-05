@@ -2,7 +2,6 @@
     outline: none;
     box-shadow: none;
 }
-
 #url-form {
     background-color: $light-grayish-violet;
     padding: 50px 0 0;
@@ -21,26 +20,43 @@
         right: 0;
         padding: 25px 20px;
         margin: 0 20px;
-        input:not(:last-of-type){
-            margin-bottom: 15px;
-        }
     }
 }
-
 .url-input {
     @include input(#FFFFFF, 100%);
     font-size: 1rem;
     border-radius: 5px;
+    position: relative;
 }
-
+.url-input.danger {
+    border: 2px solid #ff3860;
+    margin-bottom: 0;
+    &::placeholder {
+        color: #ff3860;
+        opacity: 0.8;
+    }
+    + .error {
+        display: block;
+        color: #ff3860;
+        font-style: italic;
+        margin: 5px 0 0;
+    }
+}
+.error {
+    display: none;
+    // position: absolute;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
 .shorten-btn {
     @include buttons($cyan, 100%);
     padding: 15px 30px !important;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
 .result-content {
-    margin: 50px 20px 0;
+    margin: 0 20px;
+    padding: 75px 0 20px;
 }
 
 .result-url {
@@ -49,6 +65,7 @@
     background-color: #FFFFFF;
     border-radius: 10px;
     padding: 15px 0;
+    margin: 0 0 20px;
 }
 
 .links {
@@ -85,9 +102,11 @@
     font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
+
 @media screen and (min-width: 768px) {
     #url-form {
         form {
+            align-items: center;
             background-image: url("../assets/bg-shorten-desktop.svg");
             background-size: cover;
             background-position: center;
@@ -96,9 +115,6 @@
             gap: 20px;
             padding: 50px;
             margin: 0 50px;
-            input:not(:last-of-type){
-                margin-bottom: 0;
-            }
         }
     }
     .copy-url {
@@ -113,14 +129,21 @@
         padding: 0;
     }
     .result-content {
-        padding: 0;
-        margin: 50px 50px 0;
+        margin: 0 50px 0;
+        padding: 65px 0 20px;
+    }
+    .form-url-input {
+        width: 100%;
     }
     .url-input, .shorten-btn {
         padding: 15px;
     }
     .shorten-btn {
         width: initial;
+        margin-top: 0;
+    }
+    .error {
+        position: absolute;
     }
 }
 
@@ -128,10 +151,13 @@
     #url-form {
         form {
             margin: 0 350px;
+            display: flex;
+            flex-direction: row;
         }
     }
     .result-content {
-        margin: 50px 350px 0;
+        margin: 0 350px;
+        padding: 65px 0 10px;
     }
     .result-url {
         flex-direction: row;
@@ -159,7 +185,7 @@
         width: initial;
     }
     .copy-button {
-        width: 60%;
+        width: 250px;
         padding: 10px 20px;
     }
 }
