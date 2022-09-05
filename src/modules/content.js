@@ -16,6 +16,7 @@ const DOMcontent = () => {
         const navContainer = d.createElement('div');
         navContainer.className = 'nav-content container-fluid';
         const navLogo = d.createElement('img');
+        navLogo.setAttribute('alt', 'Shortly logo on the navbar');
         navLogo.className = 'navbar-brand';
         navLogo.src = Logo;
         const toggleButton = d.createElement('a');
@@ -67,6 +68,7 @@ const DOMcontent = () => {
         const mainImage = d.createElement('div');
         mainImage.className = 'main-image';
         const illustration = d.createElement('img');
+        illustration.setAttribute('alt', 'Illustration of a working person.')
         illustration.className = 'main-illustration';
         illustration.src = MainIllustration;
 
@@ -137,6 +139,7 @@ const DOMcontent = () => {
         footerContainer.className = 'footer-content';
         /* Footer Logo */
         const footerLogo = d.createElement('img');
+        footerLogo.setAttribute('alt', 'Shortly logo on the footer.')
         footerLogo.className = 'footer-brand';
         footerLogo.src = LogoWhite;
         /* Features */

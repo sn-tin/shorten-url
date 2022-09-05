@@ -15,7 +15,7 @@ const resultShortURL = (orig, short) => {
     resultURL.innerHTML = `
         <span class="links original-link">${orig}</span>
         <div class="copy-url">
-            <input tpe="text" class="links shorten-link" value="${short}" readonly>
+            <input tpe="text" class="links shorten-link" value="${short}" readonly="readonly">
             <button class="copy-button">Copy</button>
         </div>
     `;
