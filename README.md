@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code on Github](https://github.com/sn-tin/shorten-url)
-- Live Site URL: [Deploy on Vercel](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/sn-tin/shorten-url)
+- Live Site URL: [Demo](https://your-live-site-url.com)
 
 ### Built with
 
@@ -42,9 +42,11 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - Vanilla JavaScript
-- [Webpack](https://webpack.js.org/) - Webpack
-- [Fontawesome](https://fontawesome.com/) - Font Awesome for Icons
-- [Goole Fonts](https://fonts.google.com/knowledge) - Google Fonts
+- [Webpack](https://webpack.js.org/)
+- [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/)
+- [Fontawesome](https://fontawesome.com/) - for icons
+- [Goole Fonts](https://fonts.google.com/knowledge)
 
 ### Running the App Locally
 This app runs on Node.js. If Node.js is installed, you may clone the repository and install its dependencies running:
