@@ -2,10 +2,6 @@
   margin: 30px 20px 10px;
 }
 
-.nav-content {
-  padding: 0 20px;
-}
-
 .navbar-collapse {
     font-weight: $bold;
     background-color: $dark-violet;
@@ -14,7 +10,9 @@
     border-radius: 10px;
     display: none;
   }
-  
+.navbar-brand {
+  margin-right: 30px;
+}
 .navbar-nav {
     text-align: center;
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.164);
@@ -86,7 +84,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 3rem;
+        gap: 1rem;
         padding: 0;
     }
     .nav-buttons button:not(:last-of-type) {
@@ -101,5 +99,8 @@
 @media screen and (min-width: 1350px) {
   .navbar {
     padding: 50px 350px 10px;
+  }
+  .nav-buttons {
+    gap: 2rem;
   }
 }
