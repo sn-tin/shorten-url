@@ -64,7 +64,7 @@
     margin: 15px 0;
 }
 .card-text {
-    font-size: clamp(0.9rem, 2.5vw, 1.12rem);
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 @media screen and (min-width: 768px) {
@@ -113,7 +113,7 @@
 
 @media screen and (min-width: 1350px) {
     #features {
-        padding: 80px 350px;
+        padding: 5% 10%;
     }
     .features-subtext {
         width: 43%;
